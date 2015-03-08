@@ -31,21 +31,3 @@ legend("topright", pch=1, col = c("black","red","blue"),
              legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
  
 dev.off()
-
-
-with(resultSub2, plot(resultSub2$TimeObs, resultSub2$Sub_metering_1, type = "n",
-                      xlab = " ", ylab="Energy Sub Metering", cex.axis=0.5, cex.lab=0.5))
-with(resultSub2, lines(resultSub2$TimeObs, resultSub2$Sub_metering_1, col="black", cex.axis=0.5,cex.lab=0.5))
-with(resultSub2, lines(resultSub2$TimeObs, resultSub2$Sub_metering_2, col="red", cex.axis=0.5,cex.lab=0.5))
-with(resultSub2, lines(resultSub2$TimeObs, resultSub2$Sub_metering_3, col="blue", cex.axis=0.5,cex.lab=0.5))
-legend("topright", pch=1, col = c("black","red","blue"),
-       legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), cex=0.3)
-
-with(resultSub2, 
-     plot(resultSub2$TimeObs, resultSub2$Global_reactive_power, type='l', cex.axis=0.5,cex.lab=0.5,
-          xlab="Datetime ", ylab="Global_reactive_power",
-          xlim = c(min(resultSub2$TimeObs),max(resultSub2$TimeObs)), 
-          ylim = c(min(resultSub2$Global_reactive_power), max(resultSub2$Global_reactive_power)) ))
-
-dev.off()
- 
